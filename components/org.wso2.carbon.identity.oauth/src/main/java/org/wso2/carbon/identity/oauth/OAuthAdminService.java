@@ -60,7 +60,7 @@ public class OAuthAdminService extends AbstractAdmin {
      * Get all registered OAuth applications for the logged in user.
      *
      * @return An array of <code>OAuthConsumerAppDTO</code> objecting containing the application
-     * information of the user
+     * information of the user.
      * @throws IdentityOAuthAdminException Error when reading the data from the persistence store.
      */
     public OAuthConsumerAppDTO[] getAllOAuthApplicationData() throws IdentityOAuthAdminException {
@@ -75,8 +75,8 @@ public class OAuthAdminService extends AbstractAdmin {
     /**
      * Get OAuth application data by the consumer key.
      *
-     * @param consumerKey Consumer Key
-     * @return <code>OAuthConsumerAppDTO</code> with application information
+     * @param consumerKey Consumer Key.
+     * @return <code>OAuthConsumerAppDTO</code> with application information.
      * @throws IdentityOAuthAdminException Error when reading application information from persistence store.
      */
     public OAuthConsumerAppDTO getOAuthApplicationData(String consumerKey) throws IdentityOAuthAdminException {
@@ -92,7 +92,7 @@ public class OAuthAdminService extends AbstractAdmin {
      * Get OAuth application data by the application name.
      *
      * @param appName OAuth application name
-     * @return <code>OAuthConsumerAppDTO</code> with application information
+     * @return <code>OAuthConsumerAppDTO</code> with application information.
      * @throws IdentityOAuthAdminException Error when reading application information from persistence store.
      */
     public OAuthConsumerAppDTO getOAuthApplicationDataByAppName(String appName) throws IdentityOAuthAdminException {
@@ -107,7 +107,7 @@ public class OAuthAdminService extends AbstractAdmin {
     /**
      * Registers an OAuth consumer application.
      *
-     * @param application <code>OAuthConsumerAppDTO</code> with application information
+     * @param application <code>OAuthConsumerAppDTO</code> with application information.
      * @throws IdentityOAuthAdminException Error when persisting the application information to the persistence store.
      */
     public void registerOAuthApplicationData(OAuthConsumerAppDTO application) throws IdentityOAuthAdminException {
@@ -139,7 +139,7 @@ public class OAuthAdminService extends AbstractAdmin {
     /**
      * Update existing consumer application.
      *
-     * @param consumerAppDTO <code>OAuthConsumerAppDTO</code> with updated application information
+     * @param consumerAppDTO <code>OAuthConsumerAppDTO</code> with updated application information.
      * @throws IdentityOAuthAdminException Error when updating the underlying identity persistence store.
      */
     public void updateConsumerApplication(OAuthConsumerAppDTO consumerAppDTO) throws IdentityOAuthAdminException {
@@ -153,7 +153,7 @@ public class OAuthAdminService extends AbstractAdmin {
 
     /**
      * @return
-     * @throws IdentityOAuthAdminException
+     * @throws IdentityOAuthAdminException.
      */
     public String getOauthApplicationState(String consumerKey) throws IdentityOAuthAdminException {
 
@@ -182,7 +182,7 @@ public class OAuthAdminService extends AbstractAdmin {
     /**
      * To retrieve all persisted oidc scopes with mapped claims.
      *
-     * @return all persisted scopes and claims
+     * @return all persisted scopes and claims.
      * @throws IdentityOAuthAdminException if an error occurs when loading scopes and claims.
      */
     public ScopeDTO[] getScopes() throws IdentityOAuthAdminException {
@@ -197,7 +197,7 @@ public class OAuthAdminService extends AbstractAdmin {
     /**
      * To remove persisted scopes and claims.
      *
-     * @param scope oidc scope
+     * @param scope oidc scope.
      * @throws IdentityOAuthAdminException if an error occurs when deleting scopes and claims.
      */
     public void deleteScope(String scope) throws IdentityOAuthAdminException {
@@ -244,8 +244,8 @@ public class OAuthAdminService extends AbstractAdmin {
      * To add new claims for an existing scope.
      *
      * @param scope        scope name
-     * @param addClaims    list of oidc claims to be added
-     * @param deleteClaims list of oidc claims to be deleted
+     * @param addClaims    list of oidc claims to be added.
+     * @param deleteClaims list of oidc claims to be deleted.
      * @throws IdentityOAuthAdminException if an error occurs when adding a new claim for a scope.
      */
     public void updateScope(String scope, String[] addClaims, String[] deleteClaims)
@@ -261,8 +261,8 @@ public class OAuthAdminService extends AbstractAdmin {
     /**
      * To load id of the scope table.
      *
-     * @param scope scope name
-     * @return id of the given scope
+     * @param scope scope name.
+     * @return id of the given scope.
      * @throws IdentityOAuthAdminException if an error occurs when loading scope id.
      */
     public boolean isScopeExist(String scope) throws IdentityOAuthAdminException {
@@ -275,8 +275,8 @@ public class OAuthAdminService extends AbstractAdmin {
     }
 
     /**
-     * @param consumerKey
-     * @param newState
+     * @param consumerKey.
+     * @param newState.
      * @throws IdentityOAuthAdminException
      */
     public void updateConsumerAppState(String consumerKey, String newState) throws IdentityOAuthAdminException {
@@ -322,7 +322,7 @@ public class OAuthAdminService extends AbstractAdmin {
     /**
      * Removes an OAuth consumer application.
      *
-     * @param consumerKey Consumer Key
+     * @param consumerKey Consumer Key.
      * @throws IdentityOAuthAdminException Error when removing the consumer information from the database.
      */
     public void removeOAuthApplicationData(String consumerKey) throws IdentityOAuthAdminException {
@@ -336,9 +336,9 @@ public class OAuthAdminService extends AbstractAdmin {
     }
 
     /**
-     * Get apps that are authorized by the given user
+     * Get apps that are authorized by the given user.
      *
-     * @return OAuth applications authorized by the user that have tokens in ACTIVE or EXPIRED state
+     * @return OAuth applications authorized by the user that have tokens in ACTIVE or EXPIRED state.
      */
     public OAuthConsumerAppDTO[] getAppsAuthorizedByUser() throws IdentityOAuthAdminException {
 
@@ -350,10 +350,10 @@ public class OAuthAdminService extends AbstractAdmin {
     }
 
     /**
-     * Revoke authorization for OAuth apps by resource owners
+     * Revoke authorization for OAuth apps by resource owners.
      *
      * @param revokeRequestDTO DTO representing authorized user and apps[]
-     * @return revokeRespDTO DTO representing success or failure message
+     * @return revokeRespDTO DTO representing success or failure message.
      */
     public OAuthRevocationResponseDTO revokeAuthzForAppsByResoureOwner(
             OAuthRevocationRequestDTO revokeRequestDTO) throws IdentityOAuthAdminException {
@@ -366,11 +366,11 @@ public class OAuthAdminService extends AbstractAdmin {
     }
 
     /**
-     * Revoke approve always of the consent for OAuth apps by resource owners
+     * Revoke approve always of the consent for OAuth apps by resource owners.
      *
-     * @param appName name of the app
+     * @param appName name of the app.
      * @param state   state of the approve always
-     * @return revokeRespDTO DTO representing success or failure message
+     * @return revokeRespDTO DTO representing success or failure message.
      */
     public OAuthRevocationResponseDTO updateApproveAlwaysForAppConsentByResourceOwner(String appName, String state)
             throws IdentityOAuthAdminException {
@@ -400,7 +400,7 @@ public class OAuthAdminService extends AbstractAdmin {
     /**
      * Get the registered oauth token types from OAuth server configuration file.
      *
-     * @return List of supported oauth token types
+     * @return List of supported oauth token types.
      */
     public List<String> getSupportedTokenTypes() {
 
@@ -410,7 +410,7 @@ public class OAuthAdminService extends AbstractAdmin {
     /**
      * Get the renew refresh token property value from identity.xml file.
      *
-     * @return renew refresh token property value
+     * @return renew refresh token property value.
      */
     public boolean isRefreshTokenRenewalEnabled() {
 
@@ -418,7 +418,7 @@ public class OAuthAdminService extends AbstractAdmin {
     }
 
     /**
-     * @return true if PKCE is supported by the database, false if not
+     * @return true if PKCE is supported by the database, false if not.
      */
     public boolean isPKCESupportEnabled() {
 
