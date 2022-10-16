@@ -166,7 +166,7 @@ public class DCRMUtils {
     }
 
     /**
-     * Validate application name according to the regex
+     * Validate application name according to the regex.
      *
      * @return validated or not
      */
