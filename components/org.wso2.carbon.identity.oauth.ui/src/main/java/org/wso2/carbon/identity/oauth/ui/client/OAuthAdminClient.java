@@ -46,7 +46,7 @@ public class OAuthAdminClient {
     private OAuthAdminServiceStub stub;
 
     /**
-     * Instantiates OAuthAdminClient
+     * Instantiates OAuthAdminClient.
      *
      * @param cookie           For session management
      * @param backendServerURL URL of the back end server where OAuthAdminService is running.
@@ -79,7 +79,7 @@ public class OAuthAdminClient {
         return stub.getOAuthApplicationDataByAppName(appName);
     }
 
-    // TODO : this method should return app data
+    // TODO : this method should return app data.
     public void registerOAuthApplicationData(OAuthConsumerAppDTO application) throws Exception {
 
         stub.registerOAuthApplicationData(application);
@@ -98,7 +98,7 @@ public class OAuthAdminClient {
         return stub.registerAndRetrieveOAuthApplicationData(application);
     }
 
-    // TODO : this method should be removed once above is done
+    // TODO : this method should be removed once above is done.
     public OAuthConsumerAppDTO getOAuthApplicationDataByName(String applicationName) throws Exception {
 
         OAuthConsumerAppDTO[] dtos = stub.getAllOAuthApplicationData();
@@ -192,11 +192,11 @@ public class OAuthAdminClient {
     }
 
     /**
-     * To add oidc scopes and claims
+     * To add oidc scopes and claims.
      *
      * @param scope an OIDC scope
      * @throws RemoteException                              if an exception occured during remote call.
-     * @throws OAuthAdminServiceIdentityOAuthAdminException if an error occurs when adding scopes or claims
+     * @throws OAuthAdminServiceIdentityOAuthAdminException if an error occurs when adding scopes or claims.
      */
     public void addScope(String scope, String[] claims) throws RemoteException,
             OAuthAdminServiceIdentityOAuthAdminException {
@@ -207,7 +207,7 @@ public class OAuthAdminClient {
     /**
      * To retrieve all persisted oidc scopes with mapped claims.
      *
-     * @return all persisted scopes and claims
+     * @return all persisted scopes and claims.
      * @throws RemoteException                              if an exception occured during remote call.
      * @throws OAuthAdminServiceIdentityOAuthAdminException if an error occurs when loading scopes and claims.
      */
@@ -289,7 +289,7 @@ public class OAuthAdminClient {
      * Get the registered scope validators from OAuth server configuration file.
      *
      * @return list of string containing simple names of the registered validator class
-     * @throws RemoteException exception occured during remote call
+     * @throws RemoteException exception occured during remote call.
      */
     public String[] getAllowedScopeValidators() throws RemoteException {
 
@@ -305,8 +305,8 @@ public class OAuthAdminClient {
     /**
      * Get the registered oauth token types from OAuth server configuration file.
      *
-     * @return List of supported oauth token types
-     * @throws RemoteException exception occured during remote call
+     * @return List of supported oauth token types.
+     * @throws RemoteException exception occured during remote call.
      */
     public String[] getSupportedTokenTypes() throws RemoteException {
 
@@ -320,7 +320,7 @@ public class OAuthAdminClient {
      * Return supported algorithms read from identity.xml configuration file.
      *
      * @return OAuthIDTokenAlgorithmDTO object.
-     * @throws RemoteException
+     * @throws RemoteException.
      */
     public OAuthIDTokenAlgorithmDTO getSupportedIDTokenAlgorithms() throws RemoteException {
 
@@ -330,8 +330,8 @@ public class OAuthAdminClient {
     /**
      * Return renew refresh token property value read from identity.xml configuration file.
      *
-     * @return boolean renew refresh token property value
-     * @throws RemoteException
+     * @return boolean renew refresh token property value.
+     * @throws RemoteException.
      */
     public boolean isRefreshTokenRenewalEnabled() throws RemoteException {
 
